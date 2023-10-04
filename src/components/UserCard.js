@@ -1,19 +1,13 @@
-import React from "react";
-
-function UserCard(props) {
+const UserCard = ({ id, handle, photo, description, handleUserClick }) => {
   return (
     <div className="card">
       <div className="content">
-        <img
-          className="right floated mini ui image"
-          alt={props.handle}
-          src={props.photo}
-        />
-        <div className="header">{props.handle}</div>
-        <div className="description">{props.description}</div>
+        <img className="right floated mini ui image" alt={handle} src={photo} />
+        <div className="header">{handle}</div>
+        <div className="description">{description}</div>
       </div>
       <div
-        onClick={() => props.handleUserClick(props.id)}
+        onClick={() => handleUserClick(id)}
         className="ui bottom attached button"
       >
         <i className="add icon"></i>
@@ -21,6 +15,6 @@ function UserCard(props) {
       </div>
     </div>
   );
-}
+};
 
 export default UserCard;
