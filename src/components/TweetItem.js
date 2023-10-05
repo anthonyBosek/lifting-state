@@ -1,28 +1,26 @@
-import React from "react";
-
-function TweetItem(props) {
+const TweetItem = ({ id, photo, tweet, handle, handleTweetLike }) => {
   return (
     <div className="event">
       <div className="label">
-        <img alt="CoffeeDad" src={props.photo} />
+        <img alt="CoffeeDad" src={photo} />
       </div>
       <div className="content">
         <div className="summary">
-          {props.handle}
-          <div className="date">{props.tweet.created_at}</div>
+          {handle}
+          <div className="date">{tweet.created_at}</div>
         </div>
-        <div className="extra text">{props.tweet.text}</div>
+        <div className="extra text">{tweet.text}</div>
         <div className="meta">
           <button
-            onClick={() => console.log("%ca tweet was liked", "color: red")}
+            onClick={() => handleTweetLike(id - 1, tweet.id)}
             className="ui tiny basic labeled icon like button"
           >
-            <i className="like icon"></i> {props.tweet.favorite_count} Likes
+            <i className="like icon"></i> {tweet.favorite_count} Likes
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default TweetItem;

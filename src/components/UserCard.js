@@ -7,7 +7,7 @@ const UserCard = ({ id, handle, photo, description, handleUserClick }) => {
         <div className="description">{description}</div>
       </div>
       <div
-        onClick={() => handleUserClick(id)}
+        onClick={() => handleUserClick(id - 1)}
         className="ui bottom attached button"
       >
         <i className="add icon"></i>

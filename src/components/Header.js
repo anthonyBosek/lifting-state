@@ -1,7 +1,6 @@
-import React from "react";
 import Menu from "./Menu";
 
-function Header({ darkMode, modeToggle }) {
+const Header = ({ darkMode, modeToggle }) => {
   return (
     <div className={`ui fixed menu ${darkMode ? "inverted" : ""}`}>
       <div className="menu item">Fwitter</div>
@@ -10,6 +9,6 @@ function Header({ darkMode, modeToggle }) {
       </div>
     </div>
   );
-}
+};
 
 export default Header;

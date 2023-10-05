@@ -1,6 +1,4 @@
-import React from "react";
-
-function Menu({ darkMode, modeToggle }) {
+const Menu = ({ darkMode, modeToggle }) => {
   return (
     <div className="menu item">
       <div className="ui toggle checkbox">
@@ -14,6 +12,6 @@ function Menu({ darkMode, modeToggle }) {
       </div>
     </div>
   );
-}
+};
 
 export default Menu;
